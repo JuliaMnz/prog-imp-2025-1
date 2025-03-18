@@ -15,7 +15,7 @@ public class questao02 {
             }
         } while (categoria < 1 || categoria > 3);
         
-        // Entrada do preço do produto
+        // Preço do produto
         double precoProduto;
         do {
             System.out.print("Informe o preço do produto: R$ ");
@@ -25,7 +25,7 @@ public class questao02 {
             }
         } while (precoProduto <= 0);
         
-        // Entrada da quantidade comprada
+        // Quantidade comprada
         int quantidade;
         do {
             System.out.print("Informe a quantidade comprada: ");
@@ -35,7 +35,7 @@ public class questao02 {
             }
         } while (quantidade <= 0);
 
-        // Aplicando o desconto da categoria
+        // Desconto da categoria
         double descontoCategoria = 0;
         switch (categoria) {
             case 1:
@@ -49,7 +49,7 @@ public class questao02 {
                 break;
         }
 
-        // Aplicando o desconto da quantidade
+        // Desconto da quantidade
         double descontoQuantidade = 0;
         if (quantidade <= 2) {
             descontoQuantidade = 2;
@@ -66,7 +66,7 @@ public class questao02 {
         double valorOriginalCompra = precoProduto * quantidade;
         double economia = valorOriginalCompra - valorTotalCompra;
 
-        // Exibição dos resultados
+        // Resultados
         System.out.printf("Preço original do produto: R$ ", precoProduto);
         System.out.printf("Desconto aplicado: ", descontoTotal);
         System.out.printf("Novo preço do produto: R$ ", precoComDesconto);

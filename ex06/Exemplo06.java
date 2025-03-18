@@ -27,5 +27,7 @@ public class Exemplo06 {
         double media = soma / notas.length;
         System.out.println("\nMédia da turma: " + media);
 
+        input.close();
+
     }
 }

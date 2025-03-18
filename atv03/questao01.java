@@ -33,6 +33,9 @@ public class questao01 {
             System.out.println("Multa aplicada: R$ " + multa);
             System.out.println("Juros aplicados: R$ " + juros);
             System.out.println("Valor final da conta: R$ " + valorFinal);
+        
+            scanner.close();
+
         }
     }
 }

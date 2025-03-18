@@ -22,7 +22,7 @@ public class questao04 {
             quantidadeTermos = scanner.nextInt();
         }
 
-        // Impressão da progressão aritmética
+        // Progressão aritmética
         System.out.print("Série gerada: ");
         for (int i = 0; i < quantidadeTermos; i++) {
             int termo = valorInicial + (i * incremento);
@@ -32,7 +32,7 @@ public class questao04 {
             }
         }
         
-        System.out.println(); // Quebra de linha final
+        System.out.println(); // Quebra de linha 
         scanner.close();
     }
 }
