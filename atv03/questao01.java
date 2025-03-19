@@ -15,11 +15,11 @@ public class questao01 {
         System.out.print("Informe o percentual dos juros: (Exemplo: 5 para 5%)");
         double valorJuros = scanner.nextDouble();
 
-        System.out.print("Informe a quantidade de dias em atraso");
+        System.out.print("Informe a quantidade de dias em atraso: ");
         int diasAtraso = scanner.nextInt();
 
         if (diasAtraso >= 45) {
-            System.out.println("O cálculo da conta não pode ser realizado pois a conta está atrasada há 45 dias ou mais.");
+            System.out.println("O cálculo da conta não pode ser realizado. A conta está atrasada há 45 dias ou mais.");
         } else {
             // Cálculo da multa
             double multa = valorConta * (valorMulta / 100);

@@ -69,7 +69,7 @@ public class questao03 {
         // Cálculo do percentual de mulheres com menos de 50 kg
         double percentualMulheres = (totalMulheres > 0) ? ((double) mulheresMenos50kg / totalMulheres) * 100 : 0;
         
-        // Exibição dos resultados
+        // Resultados
         System.out.println("\nResultados:");
         System.out.println("Idade da pessoa mais pesada: " + idadeMaisPesada);
         System.out.printf("Média de peso dos homens com menos de 30 anos: %.2f kg%n", mediaPesoHomens);

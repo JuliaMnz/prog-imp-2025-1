@@ -10,10 +10,10 @@ public class questao02 {
         do {
             System.out.println("Informe a categoria do produto (1, 2, 3): ");
             categoria = scanner.nextInt();
-            if (categoria < 1 || categoria > 3) {
+            if (categoria < 1 && categoria > 3) {
                 System.out.println("Categoria inválida! Digite 1, 2 ou 3.");
             }
-        } while (categoria < 1 || categoria > 3);
+        } while (categoria < 1 && categoria > 3);
         
         // Preço do produto
         double precoProduto;

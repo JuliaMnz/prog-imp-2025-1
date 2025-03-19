@@ -1,33 +1,36 @@
 import java.util.Scanner;
 
 public class Exemplo06 {
+    public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        
-        System.out.print("Digite a quantidade de notas: ");
-        int capacidade = input.nextInt();
-        
-        double[] notas = new double[capacidade];
-        
-        for (int i = 0; i < notas.length; i++) {
+        double[] notas = new double[5];
+        double somatorio, media;
+
+        // Digitação de todas as notas
+        for (int i = 0; i < notas.length; i += 1) {
             System.out.print("Digite a " + (i + 1) + "ª nota: ");
             notas[i] = input.nextDouble();
         }
 
-        System.out.println("\nNotas digitadas:");
-        for (int i = 0; i < notas.length; i++) {
-            System.out.println((i + 1) + "ª nota = " + notas[i]);
+        // Impressão das notas digitadas
+        System.out.println("\nNotas Digitadas:");
+        for (int i = 0; i < notas.length; i += 1) {
+            System.out.println((i + 1) + "ª nota: " + notas[i]);
         }
 
-        double soma = 0;
-        for (int i = 0; i < notas.length; i++) {
-            soma += notas[i];
+        // Cálculo da média
+        somatorio = 0.0;
+        for (int i = 0; i < notas.length; i += 1) {
+            somatorio += notas[i];
         }
+        media = somatorio / notas.length;
+        System.out.println("\nA média da turma é " + media);
 
-        double media = soma / notas.length;
-        System.out.println("\nMédia da turma: " + media);
-
-        input.close();
-
+        // Impressão das notas acima da média da turma
+        for (int i = 0; i < notas.length; i += 1) {
+            if (notas[i] > media) {
+                System.out.println((i + 1) + "ª nota: " + notas[i]);
+            }
+        }
     }
 }

@@ -6,7 +6,6 @@ public class questao04 {
     public static void main(String[] args) {
          Scanner scanner = new Scanner(System.in);
 
-        // Entrada dos valores
         System.out.print("Informe o valor inicial da progressão aritmética: ");
         int valorInicial = scanner.nextInt();
 
