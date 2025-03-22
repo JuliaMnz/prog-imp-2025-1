@@ -5,7 +5,7 @@ public class Main {
 public static void main(String[] args) throws IOException {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Digite um número: ");
+    System.out.print("Digite um número: ");
     int V = scanner.nextInt();
     int[] N = new int[10];
        
