@@ -6,18 +6,14 @@ public class Atividade {
         gerarNumerosAleatorios(numerosAleatorios);
         
         System.out.println("Números aleatórios sem repetição:");
-        for (int numero : numerosAleatorios) {
-            System.out.println(numero);
-        }
-        
+        imprimirNumeros(numerosAleatorios);
+
         int[] numerosOrdenados = new int[1000];
         preencherOrdenado(numerosOrdenados);
         embaralharVetor(numerosOrdenados);
         
         System.out.println("\nNúmeros embaralhados:");
-        for (int numero : numerosOrdenados) {
-            System.out.println(numero);
-        }
+        imprimirNumeros(numerosOrdenados);
     }
 
     public static void gerarNumerosAleatorios(int[] v) {
@@ -50,10 +46,17 @@ public class Atividade {
     public static void embaralharVetor(int[] v) {
         Random random = new Random();
         for (int i = 0; i < v.length; i++) {
-            int indiceAleatorio = random.nextInt(1000); // Gera um índice aleatório entre 0 e 999
+            int indiceAleatorio = random.nextInt(1000);
             int temp = v[i];
             v[i] = v[indiceAleatorio];
             v[indiceAleatorio] = temp;
         }
+    }
+
+    public static void imprimirNumeros(int[] v) {
+        for (int numero : v) {
+            System.out.print(numero + " ");
+        }
+        System.out.println(); 
     }
 }
