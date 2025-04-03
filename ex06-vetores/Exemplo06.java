@@ -94,4 +94,13 @@ public class Exemplo06 {
         }
         return -1;
     }
+
+    public static boolean estaOrdenado(int [] v) {
+        for (int i = 1; i < v.length; i+=1) {
+            if(v[i] < v[i-1]){
+            return false;
+            }
+        } 
+        return true;
+    }
 }
