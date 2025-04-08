@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exemplo07 {
+public class Exemplo {
     public static Scanner input = new Scanner(System.in);
 
     public static int pesquisaBinaria(int[] v, int x) {
