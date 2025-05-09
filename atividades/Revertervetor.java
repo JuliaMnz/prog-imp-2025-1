@@ -1,14 +1,30 @@
+import java.util.Scanner;
+
 public class Revertervetor {
 
-    public static void reverterVetor(int [] v) {
-        int[] vetor = {1, 2, 3, 4, 5};
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o tamanho do vetor: ");
+        int tamanho = scanner.nextInt();
+        int[] vetor = new int[tamanho];
+
+        System.out.println("\nDigite os valores do vetor: ");
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("vetor [" + i + "] = ");
+            vetor[i] = scanner.nextInt();
+        }
+
+        reverterVetor(vetor);
+    }
+
+    public static void reverterVetor(int[] vetor) {
         int i = 0;
         int j = vetor.length - 1;
 
-        System.out.print("Vetor original: ");
-        for (i = 0; i < vetor.length; i++) {
-            int numeroVetor = vetor[i];
-            System.out.println(numeroVetor + " ");
+        System.out.print("\nVetor original: ");
+        for (int indice = 0; indice < vetor.length; indice++) {
+            System.out.print(vetor[indice] + " ");
         }
 
         while (i < j) {
@@ -18,10 +34,10 @@ public class Revertervetor {
             i++;
             j--;
         }
-        System.out.println("Vetor invertido: ");
+
+        System.out.print("\nVetor invertido: ");
         for (int numeroVetor : vetor) {
             System.out.print(numeroVetor + " ");
         }
-
     }
 }
