@@ -1,100 +1,35 @@
 import java.util.Scanner;
 
 public class VetorOperacoes {
-
-    public static void preencherVetor(int[] v, int n) {
-        Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < n; i++) {
-            System.out.print("Digite o valor para a posição " + i + ": ");
-            v[i] = scanner.nextInt();
-        }
-    }
-
-    public static void imprimirVetor(int[] v, int n) {
-        System.out.print("{ ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(v[i]);
-            if (i < n - 1) {
-                System.out.print(", ");
-            }
-        }
-        System.out.println(" }");
-    }
-
-    public static void ordenar(int[] v, int n) {
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
-                if (v[j] > v[j + 1]) {
-                    int temp = v[j];
-                    v[j] = v[j + 1];
-                    v[j + 1] = temp;
-                }
-            }
-        }
-    }
-
-    public static void imprimirMaiorImpar(int[] v, int n) {
-        int maiorImpar = Integer.MIN_VALUE;
-        boolean existeImpar = false;
-
-        for (int i = 0; i < n; i++) {
-            if (v[i] % 2 != 0 && v[i] > maiorImpar) {
-                maiorImpar = v[i];
-                existeImpar = true;
-            }
-        }
-
-        if (existeImpar) {
-            System.out.println("Maior número ímpar: " + maiorImpar);
-        } else {
-            System.out.println("Não há números ímpares no vetor");
-        }
-    }
-
-    public static void criarParesImpares(int[] v, int n, int[] pares, int[] impares) {
-        int idxP = 0, idxI = 0;
-
-        for (int i = 0; i < n; i++) {
-            if (v[i] % 2 == 0) {
-                pares[idxP++] = v[i];
-            } else {
-                impares[idxI++] = v[i];
-            }
-        }
-
-        while (idxP < n) {
-            pares[idxP++] = -1;
-        }
-        while (idxI < n) {
-            impares[idxI++] = -1;
-        }
-    }
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Digite o tamanho do vetor: ");
-        int n = scanner.nextInt();
+        int[] numeros = {2, 5, 8, 12, 16, 23, 38, 45, 56, 72};
 
-        int[] vetor = new int[n];
-        int[] pares = new int[n];
-        int[] impares = new int[n];
+        System.out.print("Digite um número para buscar: ");
+        int alvo = input.nextInt();
 
-        preencherVetor(vetor, n);
+        int inicio = 0;
+        int fim = numeros.length - 1;
+        int meio;
+        boolean encontrado = false;
 
-        System.out.print("Vetor original: ");
-        imprimirVetor(vetor, n);
+        while (inicio <= fim) {
+            meio = (inicio + fim) / 2;
 
-        ordenar(vetor, n);
-        System.out.print("Vetor ordenado: ");
-        imprimirVetor(vetor, n);
+            if (numeros[meio] == alvo) {
+                System.out.println("Número encontrado na posição: " + meio);
+                encontrado = true;
+                break;
+            } else if (numeros[meio] < alvo) {
+                inicio = meio + 1;
+            } else {
+                fim = meio - 1;
+            }
+        }
 
-        imprimirMaiorImpar(vetor, n);
-
-        criarParesImpares(vetor, n, pares, impares);
-        System.out.print("Vetor de pares: ");
-        imprimirVetor(pares, n);
-        System.out.print("Vetor de ímpares: ");
-        imprimirVetor(impares, n);
+        if (!encontrado) {
+            System.out.println("Número não encontrado no vetor.");
+        }
     }
 }
