@@ -1,0 +1,30 @@
+Alice Silva
+1001
+7.5
+Bruno Costa
+1002
+4.0
+Carla Mendes
+1003
+6.8
+Daniel Rocha
+1004
+3.2
+Eduarda Lima
+1005
+8.9
+Felipe Torres
+1006
+2.5
+Gabriela Nunes
+1007
+5.0
+Henrique Moraes
+1008
+9.1
+Isabela Souza
+1009
+4.8
+João Pedro
+1010
+6.0

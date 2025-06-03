@@ -1,12 +1,5 @@
 import java.util.Scanner;
 
-class Pessoa {
-  String nome;
-  int idade;
-  double peso;
-  double altura;  
-}
-
 public class Exemplo11 {
   public static Scanner input = new Scanner(System.in);
 
