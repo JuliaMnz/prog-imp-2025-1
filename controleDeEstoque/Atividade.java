@@ -65,7 +65,7 @@ public class Atividade {
         input.nextLine(); 
 
         System.out.print("Categoria: ");
-        p.categoria.nextLine();
+        p.categoria = input.nextLine();
 
         System.out.print("Quantidade mínima: ");
         p.qtdMinima = input.nextInt();
