@@ -1,0 +1,91 @@
+Observação: os números "1" servem apenas para seguir o código e preencher o menu.
+
+Arroz Tipo 1
+82
+13.75
+comida
+10
+1
+Detergente Neutro
+34
+7.90
+limpeza
+5
+1
+Sabonete de Ervas
+12
+5.49
+higiene
+2
+1
+Feijão Carioca
+55
+9.30
+comida
+8
+1
+Desinfetante Floral
+60
+14.25
+limpeza
+6
+1
+Escova de Dente
+19
+3.99
+higiene
+3
+1
+Macarrão Espaguete
+44
+11.60
+comida
+9
+1
+Sabão em Pó
+28
+8.15
+limpeza
+4
+1
+Shampoo Anticaspa
+70
+6.40
+higiene
+5
+1
+Açúcar Refinado
+35
+10.99
+comida
+7
+1
+Água Sanitária
+66
+2.75
+limpeza
+3
+1
+Papel Higiênico
+49
+4.30
+higiene
+2
+1
+Farinha de Trigo
+38
+12.80
+comida
+10
+1
+Limpa Vidros
+90
+7.60
+limpeza
+6
+1
+Desodorante Roll-on
+20
+5.20
+higiene
+2

@@ -1,7 +1,7 @@
 public class Produto {
     String nome;
-    int qtdEstoque;
-    double precoUnitario;
     String categoria;
+    int qtdEstoque;
     int qtdMinima;
+    double precoUnitario;
 }
