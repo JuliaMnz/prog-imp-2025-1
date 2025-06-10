@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 class Produto {
+    public String nome;
+    public static double preco;
     String titulo;
     String descricao;
     double precoUnitario;
